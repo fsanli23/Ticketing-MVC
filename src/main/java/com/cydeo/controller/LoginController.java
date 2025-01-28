@@ -17,4 +17,18 @@ public class LoginController {
         return "welcome";
     }
 
+
+    @RequestMapping("user/create")
+    public String crete(){
+        return "user/create";
+    }
+
+
+
+
+
+
+
+
+
 }
