@@ -17,6 +17,8 @@ public class LoginController {
     @RequestMapping("/welcome")
     public String welcome() {
         return "welcome";
+
+
     }
 
 
