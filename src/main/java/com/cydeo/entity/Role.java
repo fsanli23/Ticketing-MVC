@@ -1,4 +1,4 @@
-package com.cydeo.controller.entity;
+package com.cydeo.entity;
 
 public class Role {
      private int id;

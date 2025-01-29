@@ -1,7 +1,7 @@
-package com.cydeo.controller.dto;
+package com.cydeo.dto;
 
-import com.cydeo.controller.entity.Role;
-import com.cydeo.controller.enums.Gender;
+import com.cydeo.entity.Role;
+import com.cydeo.enums.Gender;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
