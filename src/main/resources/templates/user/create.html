@@ -101,7 +101,7 @@
                                                     <label>Choose a Role</label>
                                                     <select  name="role" th:field="*{role}" class="custom-select">
                                                         <option th:value="''" th:text="Select"></option>
-                                                        <option th:each="role : ${role}" th:text="${role}"></option>
+                                                        <option th:each="role : ${roles}" th:text="${role}"></option>
                                                     </select>
                                                 </div>
                                             </div>

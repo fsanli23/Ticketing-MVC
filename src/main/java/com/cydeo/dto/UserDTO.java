@@ -16,7 +16,7 @@ public class UserDTO {
      private String password;
      private boolean enabled;
      private String phone;
-     private RawDTO rawDTO;
+     private RoleDTO roleDTO;
      private Gender gender;
      private Role role;
 
