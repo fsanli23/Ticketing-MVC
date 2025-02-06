@@ -18,6 +18,6 @@ public class UserDTO {
      private String phone;
      private RoleDTO roleDTO;
      private Gender gender;
-     private Role role;
+
 
 }
