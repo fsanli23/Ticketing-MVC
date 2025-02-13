@@ -25,8 +25,9 @@ public class DataGenerator extends AbstractMapService<Role, Long> implements Com
     public void run(String... args) throws Exception {
 
         RoleDTO adminRole = new RoleDTO(1L, "admin");
-        RoleDTO managerRole = new RoleDTO(2L, "admin");
-        RoleDTO employeeRole = new RoleDTO(3L, "admin");
+        RoleDTO managerRole = new RoleDTO(2L, "Manager");
+        RoleDTO employeeRole = new RoleDTO(3L, "Employee");
+
         roleService.save(adminRole);
         roleService.save(managerRole);
         roleService.save(employeeRole);

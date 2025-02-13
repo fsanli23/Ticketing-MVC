@@ -1,6 +1,6 @@
 package com.cydeo.entity;
 
-public class Role {
+public class Role extends BaseEntity{
      private int id;
      private String description;
 }
