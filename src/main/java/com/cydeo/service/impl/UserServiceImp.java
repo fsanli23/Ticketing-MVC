@@ -5,11 +5,12 @@ import com.cydeo.service.UserService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
-public class UserServiceImp extends AbstractMapService<UserDTO,String> implements UserService {
+public class UserServiceImp extends AbstractMapService<UserDTO, String> implements UserService {
     @Override
     public UserDTO save(UserDTO object) {
-        return super.save(object.getUsername(),object);
+        return super.save(object.getUsername(), object);
     }
 
     @Override
@@ -19,12 +20,17 @@ public class UserServiceImp extends AbstractMapService<UserDTO,String> implement
 
     @Override
     public void deleteById(String s) {
-           super.deleteById(s);
+        super.deleteById(s);
     }
 
     @Override
     public List<UserDTO> findAll() {
         return super.findAll();
+    }
+
+    @Override
+    public void update(UserDTO user) {
+        super.update(user.getUsername(),user);
     }
 
 

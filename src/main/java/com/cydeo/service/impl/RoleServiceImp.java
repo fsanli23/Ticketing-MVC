@@ -5,8 +5,9 @@ import com.cydeo.service.RoleService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
-public class RoleServiceImp extends AbstractMapService<RoleDTO,Long> implements RoleService {
+public class RoleServiceImp extends AbstractMapService<RoleDTO, Long> implements RoleService {
 
 
     @Override
@@ -20,13 +21,19 @@ public class RoleServiceImp extends AbstractMapService<RoleDTO,Long> implements 
         return super.findAll();
     }
 
+
     @Override
     public void deleteById(Long id) {
-    super.deleteById(id);
+        super.deleteById(id);
+    }
+
+    @Override
+    public void update(RoleDTO object) {
+        super.update(object.getId(), object);
     }
 
     @Override
     public RoleDTO findById(Long id) {
-      return   super.findById(id);
+        return super.findById(id);
     }
 }
