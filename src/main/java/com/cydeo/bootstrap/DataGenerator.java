@@ -46,7 +46,7 @@ public class DataGenerator extends AbstractMapService<Role, Long> implements Com
         UserDTO user3 = new UserDTO("john03", "kesy03", "john03@Cydeo@gmail.com", "abc103", true, "123456703", managerRole, Gender.MALE);
         UserDTO user4 = new UserDTO("john04", "kesy04", "john04@Cydeo@gmail.com", "abc104", true, "123456704", managerRole, Gender.MALE);
         UserDTO user5 = new UserDTO("john05", "kesy05", "john05@Cydeo@gmail.com", "abc105", true, "123456705", managerRole, Gender.MALE);
-        UserDTO user6 = new UserDTO("john06", "kesy06", "john06@Cydeo@gmail.com", "abc106", true, "123456706", managerRole, Gender.MALE);
+        UserDTO user6 = new UserDTO("john06", "kesy06", "john06@Cydeo@gmail.com", "abc106", true, "123456706", adminRole, Gender.MALE);
 
 
         ProjectDTO p1 = new ProjectDTO("CRM System", "CRM001",
