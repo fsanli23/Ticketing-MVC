@@ -5,4 +5,7 @@ import org.springframework.stereotype.Service;
 
 
 public interface ProjectService extends CrudService<ProjectDTO, String> {
+
+  void complete(ProjectDTO projectDTO);
+
 }

@@ -2,12 +2,14 @@ package com.cydeo.bootstrap;
 
 import com.cydeo.dto.ProjectDTO;
 import com.cydeo.dto.RoleDTO;
+import com.cydeo.dto.TaskDTO;
 import com.cydeo.dto.UserDTO;
 import com.cydeo.entity.Role;
 import com.cydeo.enums.Gender;
 import com.cydeo.enums.Status;
 import com.cydeo.service.ProjectService;
 import com.cydeo.service.RoleService;
+import com.cydeo.service.TaskService;
 import com.cydeo.service.UserService;
 import com.cydeo.service.impl.AbstractMapService;
 import com.cydeo.service.impl.ProjectServiceImpl;
@@ -21,13 +23,14 @@ public class DataGenerator extends AbstractMapService<Role, Long> implements Com
 
     RoleService roleService;
     UserService userService;
-
+    TaskService taskService;
     ProjectService projectService;
 
-    public DataGenerator(RoleService roleService, UserService userService, ProjectService projectService) {
+    public DataGenerator(RoleService roleService, UserService userService, ProjectService projectService, TaskService taskService) {
         this.roleService = roleService;
         this.userService = userService;
         this.projectService = projectService;
+        this.taskService = taskService;
     }
 
     @Override
@@ -44,7 +47,7 @@ public class DataGenerator extends AbstractMapService<Role, Long> implements Com
         UserDTO user1 = new UserDTO("john01", "kesy01", "john01@Cydeo@gmail.com", "abc101", true, "123456701", managerRole, Gender.MALE);
         UserDTO user2 = new UserDTO("john02", "kesy02", "john02@Cydeo@gmail.com", "abc102", true, "123456702", managerRole, Gender.MALE);
         UserDTO user3 = new UserDTO("john03", "kesy03", "john03@Cydeo@gmail.com", "abc103", true, "123456703", managerRole, Gender.MALE);
-        UserDTO user4 = new UserDTO("john04", "kesy04", "john04@Cydeo@gmail.com", "abc104", true, "123456704", managerRole, Gender.MALE);
+        UserDTO user4 = new UserDTO("john04", "kesy04", "john04@Cydeo@gmail.com", "abc104", true, "123456704", employeeRole, Gender.MALE);
         UserDTO user5 = new UserDTO("john05", "kesy05", "john05@Cydeo@gmail.com", "abc105", true, "123456705", managerRole, Gender.MALE);
         UserDTO user6 = new UserDTO("john06", "kesy06", "john06@Cydeo@gmail.com", "abc106", true, "123456706", adminRole, Gender.MALE);
 
@@ -96,20 +99,27 @@ public class DataGenerator extends AbstractMapService<Role, Long> implements Com
         userService.save(user5);
         userService.save(user6);
 
-   projectService.save(p1);
-   projectService.save(p2);
-   projectService.save(p3);
-   projectService.save(p4);
-   projectService.save(p5);
-   projectService.save(p6);
-   projectService.save(p7);
-   projectService.save(p8);
-   projectService.save(p9);
-   projectService.save(p10);
+        projectService.save(p1);
+        projectService.save(p2);
+        projectService.save(p3);
+        projectService.save(p4);
+        projectService.save(p5);
+        projectService.save(p6);
+        projectService.save(p7);
+        projectService.save(p8);
+        projectService.save(p9);
+        projectService.save(p10);
+
+        TaskDTO task1 = new TaskDTO(p9, user1, "Controller", "Request Mapping", Status.IN_PROGRESS, LocalDate.now().minusDays(4));
+        TaskDTO task2 = new TaskDTO(p2, user3, "Configuration", "Database Connection", Status.COMPLETE, LocalDate.now().minusDays(12));
+        TaskDTO task3 = new TaskDTO(p3, user6, "Mapping", "One-To-Many", Status.COMPLETE, LocalDate.now().minusDays(8));
+        TaskDTO task4 = new TaskDTO(p4, user2, "Dependency Injection", "Autowired", Status.IN_PROGRESS, LocalDate.now().minusDays(20));
 
 
-
-
+        taskService.save(task1);
+        taskService.save(task2);
+        taskService.save(task3);
+        taskService.save(task4);
 
 
     }
