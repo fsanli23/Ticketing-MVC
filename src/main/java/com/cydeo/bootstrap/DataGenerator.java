@@ -114,7 +114,7 @@ public class DataGenerator extends AbstractMapService<Role, Long> implements Com
         TaskDTO task2 = new TaskDTO(p2, user3, "Configuration", "Database Connection", Status.COMPLETE, LocalDate.now().minusDays(12));
         TaskDTO task3 = new TaskDTO(p3, user6, "Mapping", "One-To-Many", Status.COMPLETE, LocalDate.now().minusDays(8));
         TaskDTO task4 = new TaskDTO(p4, user2, "Dependency Injection", "Autowired", Status.IN_PROGRESS, LocalDate.now().minusDays(20));
-
+        System.out.println(task1.getId());
 
         taskService.save(task1);
         taskService.save(task2);
